@@ -55,7 +55,14 @@ function createCactus(){
             
         } else if (cactusPosition > 0 && cactusPosition < 60 && position < 60) {
             clearInterval(leftInterval);
-            document.body.innerHTML = `<h1 class="game-over"> Fim de Jogo você fez ${pontos} pontos. \n Aperte F5 para reiniciar</h1>`;
+            document.body.innerHTML = `<div class="container">
+            <div class="texto">
+             <h1 class="game-over" oncli> Fim de Jogo você fez ${pontos} pontos. 
+            <br> Aperte F5 para reiniciar</h1></div>
+             <div class="third">
+            <button type="button" value="atualizar" onclick="history.go(0)">Reiniciar</button>
+        </div>
+        </div>`;
         }    
         else {
             cactusPosition -=10;
